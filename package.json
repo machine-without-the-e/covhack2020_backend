@@ -1,0 +1,23 @@
+{
+  "name": "covhack2020_backend",
+  "version": "1.0.0",
+  "description": "external server",
+  "main": "index.js",
+  "dependencies": {
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheMeanMachine/covhack2020_backend.git"
+  },
+  "author": "a.m.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheMeanMachine/covhack2020_backend/issues"
+  },
+  "homepage": "https://github.com/TheMeanMachine/covhack2020_backend#readme"
+}
