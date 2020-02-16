@@ -5,11 +5,13 @@ const router = require('koa-router');
 const body = require('koa-body');
 
 //Import routes
-const moistRoute = require('./routes/moistRoute');
+const setting = require('./routes/setting.js');
+const adminRoute = require('./routes/admin');
 
 const app = new koa();
 
-app.use(moistRoute.routes());
+app.use(setting.routes());
+app.use(adminRoute.routes());
 
 app.listen(3000);
 console.log("Listening on port 3000");

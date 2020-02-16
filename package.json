@@ -4,7 +4,11 @@
   "description": "external server",
   "main": "index.js",
   "dependencies": {
-    "koa": "^2.11.0"
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-router": "^8.0.8",
+    "sqlite-async": "^1.0.12",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {},
   "scripts": {
