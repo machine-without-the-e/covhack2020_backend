@@ -4,9 +4,12 @@
   "description": "external server",
   "main": "index.js",
   "dependencies": {
+    "fetch": "^1.1.0",
     "koa": "^2.11.0",
     "koa-body": "^4.1.1",
     "koa-router": "^8.0.8",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2",
     "sqlite-async": "^1.0.12",
     "sqlite3": "^4.1.1"
   },
