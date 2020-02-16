@@ -5,13 +5,11 @@ const router = require('koa-router');
 const body = require('koa-body');
 
 //Import routes
-const setting = require('./routes/setting.js');
-const adminRoute = require('./routes/admin');
+const twilio = require('./routes/twilio');
 
 const app = new koa();
 
-app.use(setting.routes());
-app.use(adminRoute.routes());
+app.use(twilio.routes());
 
 app.listen(3000);
 console.log("Listening on port 3000");
