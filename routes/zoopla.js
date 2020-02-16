@@ -11,9 +11,9 @@ var router = Router({
 
 //http://api.zoopla.co.uk/api/v1/property_listings.xml?
 router.get(`/`, async(cnx, next) => { 
-    var url = 'http://api.zoopla.co.uk/api/v1/property_listings.xml?'
+    var url = 'http://api.zoopla.co.uk/api/v1/property_listings.json?'
     var key = 'api_key=3a5dzbqgwhu6tcbxd32ex3vv'
-    var city = 'area=coventry'
+    var city = 'postcode=cv24ha'
     var result = await fetchy.getData(url+city+'&'+key)
     // var url = 'http://api.zoopla.co.uk/api/v1/property_listings.xml?'
     // const response = await fetch(url, {
