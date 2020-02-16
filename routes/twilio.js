@@ -1,5 +1,5 @@
 var Router = require('koa-router');
-
+const koaBody = require('koa-body')({multipart: true, uploadDir: '.'})
 var twil = require('../modules/twilio');
 
 const config = require('../config');
@@ -9,12 +9,12 @@ var router = Router({
 });
 
 /*gets data*/
-router.get(`/`, async(cnx, next) => { 
+router.post(`/`, koaBody, async(cnx, next) => { 
     try{
         const body = cnx.request.body;
         
-        const link = cnx.request.link;
-        const price = cnx.request.price;
+        const link = body.link;
+        const price = body.price;
 
         const phone = body.phone;//phone
         const message = `

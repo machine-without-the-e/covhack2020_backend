@@ -5,7 +5,7 @@ exports.send = (to, body) => {
 	 
 	client.messages 
 	      .create({ 
-	         body: 'This is a price update for your house', 
+	         body: body, 
 	         from: '+447723481540',       
 	         to: to
 	       }) 
