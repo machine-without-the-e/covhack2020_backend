@@ -9,22 +9,27 @@ var router = Router({
 	prefix: '/data'
 });
 
-/*gets data*/
+//http://api.zoopla.co.uk/api/v1/property_listings.xml?
 router.get(`/`, async(cnx, next) => { 
-    try{
-        const body = cnx.request.body;
-        
-        const moisture = body.moisturelevel || 0;
+    var url = 'http://api.zoopla.co.uk/api/v1/property_listings.xml?'
+    const response = await fetch(url, {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: 'same-origin', // include, *same-origin, omit
+        headers: {
+          'Content-Type': 'application/json',
+          'api_key': '3a5dzbqgwhu6tcbxd32ex3vv',
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+            'area': 'coventry'
+        },
+        redirect: 'follow', // manual, *follow, error
+        referrerPolicy: 'no-referrer', // no-referrer, *client
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+      
+      return await response.json(); // parses JSON response into native JavaScript objects
 
-        console.log(await fetch.getData(config.url, config.routes.data));
-  
-
-        cnx.body = {message: 'Set'};
-        cnx.response.status = 200;//a-o-kay
-    }catch(error){
-        cnx.response.status = error.status || 400;
-        cnx.body = {message:error.message};
-    }
 });
 
 module.exports = router;
