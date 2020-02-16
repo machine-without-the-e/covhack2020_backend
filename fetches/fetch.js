@@ -1,4 +1,4 @@
-
+const fetch = require('fetch')
 
 // Example POST method implementation:
 exports.postData = async (url = '', route = '', data = {}) => {
@@ -29,7 +29,7 @@ exports.getData = async (url = '', route = '') => {
     },
     redirect: 'follow',
     referrerPolicy: 'no-referrer',
-    body: JSON.stringify(data)
+    body: ''
   });
   return await response.json();
 }
