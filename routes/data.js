@@ -1,6 +1,6 @@
 var Router = require('koa-router');
 
-var dataDoa = require('../models/dataDoa');
+//var dataDoa = require('../models/dataDoa');
 var fetch = require('../fetches/fetch');
 
 const config = require('../config');
