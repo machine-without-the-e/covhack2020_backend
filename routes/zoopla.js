@@ -16,7 +16,7 @@ router.get(`/`, async(cnx, next) => {
         
         const moisture = body.moisturelevel || 0;
 
-        console.log(await fetch.getData(config.url, config.routes.data);
+        console.log(await fetch.getData(config.url, config.routes.data));
   
 
         cnx.body = {message: 'Set'};
